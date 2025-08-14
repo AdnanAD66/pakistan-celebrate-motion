@@ -9,10 +9,10 @@ const Index = () => {
   useEffect(() => {
     console.log('Index component mounted');
     // Set page title and meta for SEO
-    document.title = "Pakistan Independence Day 2024 - Celebrating 77 Years of Freedom";
+    document.title = "Pakistan Independence Day 2024 - Celebrating 78 Years of Freedom";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Celebrate Pakistan Independence Day 2024 with stunning 3D animations, fireworks, and interactive experiences. Join us in commemorating 77 years of freedom, unity, and progress.');
+      metaDescription.setAttribute('content', 'Celebrate Pakistan Independence Day 2024 with stunning 3D animations, fireworks, and interactive experiences. Join us in commemorating 78 years of freedom, unity, and progress.');
     }
   }, []);
 

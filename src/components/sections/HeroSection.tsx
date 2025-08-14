@@ -73,7 +73,7 @@ export const HeroSection = () => {
             textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)'
           }}
         >
-          Celebrating <span className="text-gold font-semibold">77 years</span> of 
+          Celebrating <span className="text-gold font-semibold">78 years</span> of 
           <br className="hidden md:block" /> 
           <span className="celebration-text font-bold"> Freedom, Unity & Progress</span>
         </p>
