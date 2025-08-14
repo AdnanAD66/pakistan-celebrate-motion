@@ -7,6 +7,7 @@ import { ParticleEffect, ConfettiEffect } from '@/components/effects/ParticleEff
 
 const Index = () => {
   useEffect(() => {
+    console.log('Index component mounted');
     // Set page title and meta for SEO
     document.title = "Pakistan Independence Day 2024 - Celebrating 77 Years of Freedom";
     const metaDescription = document.querySelector('meta[name="description"]');

@@ -5,27 +5,33 @@ import { Scene3D } from '../3d/Scene3D';
 import { CelebrationButton } from '../ui/celebration-button';
 
 export const HeroSection = () => {
+  console.log('HeroSection rendering');
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const dateRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    console.log('HeroSection useEffect running');
+    try {
+      const tl = gsap.timeline();
 
-    tl.fromTo(titleRef.current, 
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
-    )
-    .fromTo(subtitleRef.current,
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.2, ease: "power3.out" },
-      "-=0.8"
-    )
-    .fromTo(dateRef.current,
-      { scale: 0, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 1, ease: "back.out(1.7)" },
-      "-=0.5"
-    );
+      tl.fromTo(titleRef.current, 
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
+      )
+      .fromTo(subtitleRef.current,
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.2, ease: "power3.out" },
+        "-=0.8"
+      )
+      .fromTo(dateRef.current,
+        { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 1, ease: "back.out(1.7)" },
+        "-=0.5"
+      );
+    } catch (error) {
+      console.error('Error in HeroSection animation:', error);
+    }
   }, []);
 
   return (
